@@ -104,12 +104,43 @@ src/
     text_agent.py         # Wikipedia REST API search
     judge_agent.py        # Scores and selects best content
   orchestrator.py         # ThreadPoolExecutor + PriorityQueue coordination
-tests/                    # Unit tests (mocked API calls)
+tests/                    # 33 unit tests (mocked API calls)
+research/
+  RESEARCH.md             # JudgeAgent scoring sensitivity analysis
+  literature.md           # MCDM and information retrieval literature review
+  experiments/
+    judge_analysis.py     # Sensitivity analysis script
+results/
+  metrics/                # Baseline and sensitivity JSON metrics
+  figures/                # 4 publication-quality visualizations
+notebooks/
+  research_results.ipynb  # Jupyter notebook with full analysis
 examples/
   example_route.py        # Route extraction demo
   example_agents.py       # All agents working together demo
 tour_guide.py             # Interactive CLI entry point
 ```
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [docs/PRD.md](docs/PRD.md) | Product requirements |
+| [docs/Architecture.md](docs/Architecture.md) | System design, data flow, concurrency model |
+| [docs/EXAMPLE_RUN.md](docs/EXAMPLE_RUN.md) | Real run with 22 route points |
+| [docs/UI.md](docs/UI.md) | CLI documentation with terminal examples |
+| [docs/UI_UX_REVIEW.md](docs/UI_UX_REVIEW.md) | Nielsen's heuristics evaluation (3.9/5) |
+| [docs/CONFIG.md](docs/CONFIG.md) | Configuration options |
+| [docs/SECURITY.md](docs/SECURITY.md) | Credential management |
+| [docs/COSTS.md](docs/COSTS.md) | API cost breakdown |
+| [docs/EXTENSIBILITY.md](docs/EXTENSIBILITY.md) | How to extend the system |
+| [research/RESEARCH.md](research/RESEARCH.md) | Scoring sensitivity analysis (221 decisions) |
+
+## CI
+
+GitHub Actions runs on every push/PR to main:
+- **Pylint**: 10.00/10 across `src/`, `tour_guide.py`, `tests/`, `research/`
+- **Pytest**: 33 tests passing
 
 ## Requirements
 
