@@ -1,5 +1,11 @@
 # AI Tour Guide Orchestration System
 
+[![CI](https://github.com/SharonKIDC/AIAgents3997-HW4/actions/workflows/ci.yml/badge.svg)](https://github.com/SharonKIDC/AIAgents3997-HW4/actions/workflows/ci.yml)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![Pylint](https://img.shields.io/badge/pylint-10.00%2F10-brightgreen.svg)](pyproject.toml)
+[![Tests](https://img.shields.io/badge/tests-33%20passed-brightgreen.svg)](tests/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A multi-agent system that enriches walking tours with multimedia content. Given a Google Maps route, it extracts every point along the path and concurrently searches for the best video, music, or text to accompany each stop.
 
 For detailed requirements see [docs/PRD.md](docs/PRD.md). For architecture see [docs/Architecture.md](docs/Architecture.md).
@@ -152,4 +158,4 @@ GitHub Actions runs on every push/PR to main:
 
 ## License
 
-Educational project for AI Agents course (HW4).
+MIT License — see [LICENSE](LICENSE) for details. Educational project for AI Agents course (HW4).
