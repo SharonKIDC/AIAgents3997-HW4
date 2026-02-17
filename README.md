@@ -30,7 +30,9 @@ python tour_guide.py --log-level DEBUG      # Verbose logging
 python tour_guide.py --log-file my.log      # Custom log file
 ```
 
-Example session:
+Example session (Pantheon → Vatican City, Rome):
+
+![Route Map](docs/images/route_example.png)
 
 ```
 ======================================================================
