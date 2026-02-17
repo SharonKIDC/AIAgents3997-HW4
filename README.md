@@ -2,7 +2,7 @@
 
 A multi-agent system that enriches walking tours with multimedia content. Given a Google Maps route, it extracts every point along the path and concurrently searches for the best video, music, or text to accompany each stop.
 
-For detailed requirements and architecture, see [PRD.md](PRD.md).
+For detailed requirements see [docs/PRD.md](docs/PRD.md). For architecture see [docs/Architecture.md](docs/Architecture.md).
 
 ## Quick Start
 

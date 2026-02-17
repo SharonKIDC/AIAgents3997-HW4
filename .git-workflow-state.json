@@ -1,0 +1,59 @@
+{
+  "project": "ai-tour-guide",
+  "initialized_at": "2024-12-14T00:00:00Z",
+  "current_phase": "PreProject",
+  "phases_completed": [],
+  "phases_in_progress": ["PreProject"],
+  "total_commits": 10,
+  "minimum_commits_target": 15,
+  "branches": {
+    "main": "main",
+    "phase_branches": [],
+    "agent_branches": []
+  },
+  "agents_executed": [
+    {
+      "agent_id": "repo-scaffolder",
+      "phase": "PreProject",
+      "status": "completed",
+      "artifacts": ["src/", "tests/", "examples/", ".gitignore", "requirements.txt"]
+    },
+    {
+      "agent_id": "prd-author",
+      "phase": "PreProject",
+      "status": "completed",
+      "artifacts": ["PRD.md"]
+    },
+    {
+      "agent_id": "readme-author",
+      "phase": "PreProject",
+      "status": "completed",
+      "artifacts": ["README.md"]
+    },
+    {
+      "agent_id": "config-security-baseline",
+      "phase": "PreProject",
+      "status": "completed",
+      "artifacts": [".env.example", ".gitignore", "docs/SECURITY.md"]
+    },
+    {
+      "agent_id": "architecture-author",
+      "phase": "PreProject",
+      "status": "completed",
+      "artifacts": ["docs/Architecture.md", "docs/ADRs/"]
+    },
+    {
+      "agent_id": "prompt-log-initializer",
+      "phase": "PreProject",
+      "status": "completed",
+      "artifacts": ["docs/development/PROMPT_LOG.md"]
+    }
+  ],
+  "gate_results": {
+    "no_secrets_in_code": "pass",
+    "config_separation": "pass",
+    "example_env_present": "pass",
+    "tests_present": "pass",
+    "readme_updated_if_needed": "pass"
+  }
+}
