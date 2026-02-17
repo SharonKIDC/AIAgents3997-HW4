@@ -44,7 +44,6 @@ logging.info(f"({run_id}, YouTubeAgent, Searching for videos about {location_nam
 
 ## Code Quality
 
-- **ruff** for linting and formatting
-- **mypy** for type checking
+- Use type hints consistently
 - Handle API failures gracefully (timeouts, rate limits)
 - Never commit `.env` or API keys

@@ -84,7 +84,7 @@ See [examples/](examples/) for complete working demos.
 ### Running Tests
 
 ```bash
-pytest tests/ -v          # All 34 tests
+pytest tests/ -v          # All 33 tests
 pytest tests/test_google_maps.py -v   # Single module
 ```
 
