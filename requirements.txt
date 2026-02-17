@@ -1,0 +1,12 @@
+# API Clients
+googlemaps>=4.10.0
+google-api-python-client>=2.108.0
+spotipy>=2.23.0
+requests>=2.31.0
+
+# Utilities
+python-dotenv>=1.0.0
+
+# Testing
+pytest>=7.4.0
+pytest-mock>=3.12.0
