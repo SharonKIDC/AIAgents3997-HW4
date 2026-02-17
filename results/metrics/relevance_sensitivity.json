@@ -1,0 +1,44 @@
+[
+  {
+    "multiplier": 0,
+    "text_pct": 74.6,
+    "video_pct": 19.1,
+    "music_pct": 6.2,
+    "avg_gap": 9.7
+  },
+  {
+    "multiplier": 1,
+    "text_pct": 89.5,
+    "video_pct": 10.5,
+    "music_pct": 0.0,
+    "avg_gap": 11.9
+  },
+  {
+    "multiplier": 3,
+    "text_pct": 89.5,
+    "video_pct": 10.5,
+    "music_pct": 0.0,
+    "avg_gap": 16.5
+  },
+  {
+    "multiplier": 5,
+    "text_pct": 89.5,
+    "video_pct": 10.5,
+    "music_pct": 0.0,
+    "avg_gap": 21.0
+  },
+  {
+    "multiplier": 8,
+    "text_pct": 89.5,
+    "video_pct": 10.5,
+    "music_pct": 0.0,
+    "avg_gap": 24.5
+  },
+  {
+    "multiplier": 10,
+    "text_pct": 80.9,
+    "video_pct": 19.1,
+    "music_pct": 0.0,
+    "avg_gap": 24.3
+  }
+]

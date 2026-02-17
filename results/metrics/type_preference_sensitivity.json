@@ -1,0 +1,38 @@
+[
+  {
+    "config": "Default (10/5/5)",
+    "text_pct": 89.5,
+    "video_pct": 10.5,
+    "music_pct": 0.0
+  },
+  {
+    "config": "Equal (5/5/5)",
+    "text_pct": 80.9,
+    "video_pct": 19.1,
+    "music_pct": 0.0
+  },
+  {
+    "config": "Equal (10/10/10)",
+    "text_pct": 80.9,
+    "video_pct": 19.1,
+    "music_pct": 0.0
+  },
+  {
+    "config": "Music-boosted (5/5/15)",
+    "text_pct": 74.6,
+    "video_pct": 19.1,
+    "music_pct": 6.2
+  },
+  {
+    "config": "Video-boosted (5/15/5)",
+    "text_pct": 77.0,
+    "video_pct": 23.0,
+    "music_pct": 0.0
+  },
+  {
+    "config": "No preference (0/0/0)",
+    "text_pct": 80.9,
+    "video_pct": 19.1,
+    "music_pct": 0.0
+  }
+]

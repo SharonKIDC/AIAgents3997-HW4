@@ -1,0 +1,34 @@
+{
+  "total_judgments": 221,
+  "type_avg_scores": {
+    "video": 81.9,
+    "music": 61.1,
+    "text": 87.0
+  },
+  "type_win_rates": {
+    "text": 86.4,
+    "video": 10.0,
+    "music": 3.6
+  },
+  "avg_score_gap": 21.0,
+  "type_score_details": {
+    "video": {
+      "count": 59,
+      "min": 60.0,
+      "max": 95.0,
+      "avg": 81.9
+    },
+    "music": {
+      "count": 217,
+      "min": 60.0,
+      "max": 65.0,
+      "avg": 61.1
+    },
+    "text": {
+      "count": 209,
+      "min": 80.0,
+      "max": 100.0,
+      "avg": 87.0
+    }
+  }
+}
