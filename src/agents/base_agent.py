@@ -46,7 +46,6 @@ class BaseAgent(ABC):
         Returns:
             AgentResult with the search results
         """
-        pass
 
     def create_result(
         self,

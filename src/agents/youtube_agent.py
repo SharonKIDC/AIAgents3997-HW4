@@ -1,4 +1,5 @@
 """YouTube search agent for finding relevant videos."""
+# pylint: disable=no-member  # googleapiclient.discovery.Resource uses dynamic attributes
 
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError

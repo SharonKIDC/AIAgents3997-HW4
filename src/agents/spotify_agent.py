@@ -53,7 +53,7 @@ class SpotifyAgent(BaseAgent):
 
             # If no results, try with just "ambient" or "instrumental"
             if not results['tracks']['items']:
-                self.log_info(f"No tracks found, trying ambient instrumental")
+                self.log_info("No tracks found, trying ambient instrumental")
                 results = self.spotify.search(q="ambient instrumental", type='track', limit=1)
 
             # If still no results, return placeholder

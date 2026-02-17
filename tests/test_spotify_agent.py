@@ -38,7 +38,7 @@ class TestSpotifyAgent:
 
     @patch('spotipy.Spotify')
     @patch('spotipy.oauth2.SpotifyClientCredentials')
-    def test_search_success(self, mock_creds, mock_spotify_class, sample_point):
+    def test_search_success(self, __mock_creds, mock_spotify_class, sample_point):
         """Test successful Spotify search."""
         mock_spotify = MagicMock()
         mock_spotify.search.return_value = {
@@ -72,7 +72,7 @@ class TestSpotifyAgent:
 
     @patch('spotipy.Spotify')
     @patch('spotipy.oauth2.SpotifyClientCredentials')
-    def test_search_no_results(self, mock_creds, mock_spotify_class, sample_point):
+    def test_search_no_results(self, _mock_creds, mock_spotify_class, sample_point):
         """Test Spotify search with no results - should return placeholder."""
         mock_spotify = MagicMock()
         # All searches return empty results
@@ -93,7 +93,7 @@ class TestSpotifyAgent:
 
     @patch('spotipy.Spotify')
     @patch('spotipy.oauth2.SpotifyClientCredentials')
-    def test_search_api_error(self, mock_creds, mock_spotify_class, sample_point):
+    def test_search_api_error(self, _mock_creds, mock_spotify_class, sample_point):
         """Test Spotify search with API error."""
         import spotipy
 
@@ -117,7 +117,7 @@ class TestSpotifyAgent:
 
     @patch('spotipy.Spotify')
     @patch('spotipy.oauth2.SpotifyClientCredentials')
-    def test_create_search_query_adds_context(self, mock_creds, mock_spotify_class, sample_point):
+    def test_create_search_query_adds_context(self, _mock_creds, mock_spotify_class, sample_point):
         """Test that search query adds instrumental ambient context."""
         mock_spotify = MagicMock()
         mock_spotify_class.return_value = mock_spotify
@@ -134,7 +134,7 @@ class TestSpotifyAgent:
 
     @patch('spotipy.Spotify')
     @patch('spotipy.oauth2.SpotifyClientCredentials')
-    def test_create_search_query_filters_navigation(self, mock_creds, mock_spotify_class, navigation_point):
+    def test_create_search_query_filters_navigation(self, _mock_creds, mock_spotify_class, navigation_point):
         """Test that navigation words are filtered."""
         mock_spotify = MagicMock()
         mock_spotify_class.return_value = mock_spotify
@@ -152,7 +152,7 @@ class TestSpotifyAgent:
 
     @patch('spotipy.Spotify')
     @patch('spotipy.oauth2.SpotifyClientCredentials')
-    def test_result_handles_optional_fields(self, mock_creds, mock_spotify_class, sample_point):
+    def test_result_handles_optional_fields(self, _mock_creds, mock_spotify_class, sample_point):
         """Test that result handles optional fields like preview_url."""
         mock_spotify = MagicMock()
         mock_spotify.search.return_value = {

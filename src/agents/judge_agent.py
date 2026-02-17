@@ -135,7 +135,7 @@ class JudgeAgent:
         best_result: AgentResult,
         best_score: float,
         all_scored: List[tuple[AgentResult, float]],
-        point: Point
+        _point: Point,
     ) -> str:
         """
         Generate reasoning for the selection.
@@ -166,7 +166,7 @@ class JudgeAgent:
         if other_scores:
             avg_other = sum(other_scores) / len(other_scores)
             if best_score > avg_other + 10:
-                reasons.append(f"Significantly higher relevance than alternatives")
+                reasons.append("Significantly higher relevance than alternatives")
 
         # Content quality indicators
         if best_result.content.get('description'):

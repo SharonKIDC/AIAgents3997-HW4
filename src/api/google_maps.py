@@ -71,12 +71,17 @@ class GoogleMapsClient:
 
             # Extract all points from the route
             points = self._extract_points_from_directions(directions_result[0])
-            self.logger.info(f"({self.run_id}, GoogleMapsClient, Successfully extracted {len(points)} points from route)")
+            self.logger.info(
+                f"({self.run_id}, GoogleMapsClient, "
+                f"Successfully extracted {len(points)} points from route)"
+            )
             return points
 
         except ApiError as e:
-            self.logger.error(f"({self.run_id}, GoogleMapsClient, API error getting directions: {e})")
-            raise ValueError(f"Google Maps API error: {e}")
+            self.logger.error(
+                f"({self.run_id}, GoogleMapsClient, API error getting directions: {e})"
+            )
+            raise ValueError(f"Google Maps API error: {e}") from e
         except Exception as e:
             self.logger.error(f"({self.run_id}, GoogleMapsClient, Error getting directions: {e})")
             raise
@@ -147,10 +152,13 @@ class GoogleMapsClient:
 
         # Get all legs of the route
         for leg_idx, leg in enumerate(route.get('legs', [])):
-            self.logger.info(f"({self.run_id}, GoogleMapsClient, Processing leg {leg_idx + 1}: {leg.get('distance', {}).get('text', 'unknown distance')})")
+            distance = leg.get('distance', {}).get('text', 'unknown distance')
+            self.logger.info(
+                f"({self.run_id}, GoogleMapsClient, Processing leg {leg_idx + 1}: {distance})"
+            )
 
             # Extract point for each step
-            for step_idx, step in enumerate(leg.get('steps', [])):
+            for step in leg.get('steps', []):
                 # Get start location of this step
                 start_location = step.get('start_location', {})
 
@@ -300,8 +308,10 @@ class GoogleMapsClient:
             return point
 
         except ApiError as e:
-            self.logger.error(f"({self.run_id}, GoogleMapsClient, API error geocoding {location_name}: {e})")
-            raise ValueError(f"Google Maps API error: {e}")
+            self.logger.error(
+                f"({self.run_id}, GoogleMapsClient, API error geocoding {location_name}: {e})"
+            )
+            raise ValueError(f"Google Maps API error: {e}") from e
         except Exception as e:
             self.logger.error(f"({self.run_id}, GoogleMapsClient, Error geocoding {location_name}: {e})")
             raise

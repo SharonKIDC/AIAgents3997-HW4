@@ -111,7 +111,7 @@ class Orchestrator:
             # Get next task
             try:
                 task = self.task_queue.get(timeout=1)
-            except:
+            except Exception:  # noqa: BLE001
                 continue
 
             # Submit task to executor

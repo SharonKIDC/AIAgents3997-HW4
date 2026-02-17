@@ -51,7 +51,11 @@ class TestJudgeAgent:
             content_type="text",
             content={
                 'title': 'Pantheon Rome',  # Contains location name - higher relevance
-                'description': 'The Pantheon is a former Roman temple, now a Catholic church, in Rome, Italy. It is one of the best-preserved of all Ancient Roman buildings and has been in continuous use throughout its history.',
+                'description': (
+                    'The Pantheon is a former Roman temple, now a Catholic church, in Rome, Italy. '
+                    'It is one of the best-preserved of all Ancient Roman buildings and has been in '
+                    'continuous use throughout its history.'
+                ),
                 'url': 'https://en.wikipedia.org/wiki/Pantheon'
             },
             timestamp=datetime.now(),

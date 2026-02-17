@@ -1,7 +1,6 @@
 """Tests for Google Maps API integration."""
 
-import pytest
-from unittest.mock import Mock, patch, MagicMock
+from unittest.mock import Mock, patch
 
 from src.api.google_maps import GoogleMapsClient
 from src.models.point import Point, Coordinates

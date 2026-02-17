@@ -31,3 +31,24 @@ include = ["src*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.pylint.main]
+fail-under = 8.0
+
+[tool.pylint."messages control"]
+disable = [
+    "logging-fstring-interpolation",  # f-strings in logging are fine for this project
+    "too-many-instance-attributes",
+    "too-many-arguments",
+    "too-many-positional-arguments",
+    "broad-exception-caught",         # agents intentionally catch broad exceptions
+    "duplicate-code",                 # test fixtures share setup code by design
+    "redefined-outer-name",           # pytest fixtures redefine outer names
+    "import-outside-toplevel",        # conditional imports in tests
+    "wrong-import-order",             # not critical
+    "protected-access",               # tests access private methods for unit testing
+    "use-implicit-booleaness-not-comparison",
+]
+
+[tool.pylint.format]
+max-line-length = 120

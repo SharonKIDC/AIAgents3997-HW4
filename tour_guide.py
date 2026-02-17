@@ -17,8 +17,8 @@ from dotenv import load_dotenv
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-from src.api.google_maps import GoogleMapsClient
-from src.orchestrator import Orchestrator
+from src.api.google_maps import GoogleMapsClient  # pylint: disable=wrong-import-position
+from src.orchestrator import Orchestrator  # pylint: disable=wrong-import-position
 
 
 def setup_logging(log_level: str, log_file: str = "tour_guide.log"):
@@ -78,7 +78,9 @@ def format_decision_summary(point, decision, point_number, total_points):
     content_title = content.get('title', 'N/A') if content else 'N/A'
 
     # Format: Point X/Y: Location -> Type: Title
-    return f"  Point {point_number:2d}/{total_points}: {point.location_name[:50]:50s} -> {decision.selected_content_type.upper():5s}: {content_title[:50]}"
+    location = f"{point.location_name[:50]:50s}"
+    content_type = f"{decision.selected_content_type.upper():5s}"
+    return f"  Point {point_number:2d}/{total_points}: {location} -> {content_type}: {content_title[:50]}"
 
 
 def process_map_url(url: str, google_api_key: str, youtube_api_key: str,

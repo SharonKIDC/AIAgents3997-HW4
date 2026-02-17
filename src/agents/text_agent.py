@@ -50,7 +50,10 @@ class TextAgent(BaseAgent):
                 # Return placeholder instead of failure
                 content = {
                     'title': point.location_name,
-                    'description': f"No specific information found for {point.location_name}. This may be a navigation point or specific instruction.",
+                    'description': (
+                        f"No specific information found for {point.location_name}. "
+                        "This may be a navigation point or specific instruction."
+                    ),
                     'url': "",
                     'source': 'Wikipedia',
                     'extract_html': ''
@@ -222,7 +225,7 @@ class TextAgent(BaseAgent):
         if len(cleaned_parts) >= 2:
             # Return just the city (second-to-last part, before country)
             return cleaned_parts[-2]
-        elif len(cleaned_parts) == 1:
+        if len(cleaned_parts) == 1:
             return cleaned_parts[0]
 
         return None

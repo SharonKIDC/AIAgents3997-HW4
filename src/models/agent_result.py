@@ -20,8 +20,7 @@ class AgentResult:
     def __str__(self) -> str:
         if self.success:
             return f"AgentResult({self.agent_name}: {self.content.get('title', 'N/A')})"
-        else:
-            return f"AgentResult({self.agent_name}: FAILED - {self.error_message})"
+        return f"AgentResult({self.agent_name}: FAILED - {self.error_message})"
 
 
 @dataclass
@@ -36,4 +35,5 @@ class JudgeDecision:
     all_results: list[AgentResult]
 
     def __str__(self) -> str:
-        return f"JudgeDecision(selected: {self.selected_content_type}, title: {self.selected_content.get('title', 'N/A')})"
+        title = self.selected_content.get('title', 'N/A')
+        return f"JudgeDecision(selected: {self.selected_content_type}, title: {title})"
