@@ -7,6 +7,7 @@ requests>=2.31.0
 # Utilities
 python-dotenv>=1.0.0
 
-# Testing
+# Testing & Quality
 pytest>=7.4.0
 pytest-mock>=3.12.0
+pylint>=3.0.0

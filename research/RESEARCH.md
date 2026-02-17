@@ -114,10 +114,17 @@ For maximum relevance: Default config `type_pref=(10/5/5), relevance_mult=5, des
 
 ### Visualizations
 
-See [results/figures/](../results/figures/) for:
-- Score distribution by content type
-- Sensitivity sweep heatmaps
-- Content selection pie charts across configs
+#### Figure 1: Average Judge Score by Content Type
+![Score Distribution](../results/figures/score_distribution.png)
+
+#### Figure 2: Content Selection Distribution
+![Win Rate Pie](../results/figures/win_rate_pie.png)
+
+#### Figure 3: Type Preference Sensitivity
+![Type Preference Sensitivity](../results/figures/type_preference_sensitivity.png)
+
+#### Figure 4: Relevance Multiplier Sensitivity
+![Relevance Sensitivity](../results/figures/relevance_sensitivity.png)
 
 ## Analysis
 
